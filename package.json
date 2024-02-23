@@ -15,6 +15,10 @@
   },
   "author": "Daniel Norred <daniel@nor.red>",
   "license": "MIT",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
   "dependencies": {
     "lib0": "^0.2.89",
     "y-protocols": "^1.0.6",
