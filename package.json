@@ -2,8 +2,14 @@
   "name": "y-webtransport",
   "version": "0.0.0",
   "description": "Web Transport provider for Yjs",
-  "main": "index.js",
+  "main": "dist/y-webtransport.js",
+  "types": "dist/types/index.d.ts",
   "type": "module",
+  "homepage": "https://github.com/MinisculeGirraffe/y-webtransport",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MinisculeGirraffe/y-webtransport.git"
+  },
   "scripts": {
     "dist": "rm -rf dist && rollup -c"
   },
@@ -15,8 +21,8 @@
     "yjs": "^13.6.12"
   },
   "devDependencies": {
+    "esbuild": "^0.20.1",
     "rollup-plugin-esbuild": "^6.1.1",
-    "typescript": "^5.3.3",
-    "esbuild": "^0.20.1"
+    "typescript": "^5.3.3"
   }
 }

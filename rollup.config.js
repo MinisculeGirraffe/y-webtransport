@@ -1,4 +1,5 @@
 import esbuild from 'rollup-plugin-esbuild';
+
 /** @type {import('rollup').RollupOptions} */
 const config = [{
     input: 'src/index.ts',
@@ -7,7 +8,7 @@ const config = [{
         file: 'dist/y-webtransport.mjs',
         format: "es",
         inlineDynamicImports: true,
-       
+        sourcemap: true,
     },
     plugins: [
         esbuild({
@@ -16,23 +17,8 @@ const config = [{
             exclude: /node_modules/, // default
             sourceMap: true, // default
             minify: process.env.NODE_ENV === 'production',
-            target: 'es2017', // default, or 'es20XX', 'esnext'
-            jsx: 'transform', // default, or 'preserve'
-            jsxFactory: 'React.createElement',
-            jsxFragment: 'React.Fragment',
-            // Like @rollup/plugin-replace
-            define: {
-              __VERSION__: '"x.y.z"',
-            },
+            target: 'es2022', // default, or 'es20XX', 'esnext'
             tsconfig: 'tsconfig.json', // default
-            // Add extra loaders
-            loaders: {
-              // Add .json files support
-              // require @rollup/plugin-commonjs
-              '.json': 'json',
-              // Enable JSX in .js files too
-              '.js': 'jsx',
-            },
           }),
     ]
 }
